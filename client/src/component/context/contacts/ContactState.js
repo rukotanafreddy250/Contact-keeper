@@ -50,7 +50,28 @@ const ContactState = props => {
             }
         ]
     }
+    const [state, dispatch] = useReducer(contactReducer, initialState);
 
+    // add contact
+
+    // delete contact
+
+    // set current contact
+
+    // clear Current Contact
+
+    // Update contact 
+
+    // filter contact
+
+    // clear filter
+
+
+    
 }
 
-const [state, dispatch] = useReducer();
+
+
+
+
+
