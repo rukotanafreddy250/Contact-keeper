@@ -17,9 +17,9 @@ import "font-awesome/less/font-awesome.less"
 import "font-awesome/less/icons.less"
 
 
-ReactDOM.render(
+ReactDOM.render(     
   <React.StrictMode>
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-);
+);   

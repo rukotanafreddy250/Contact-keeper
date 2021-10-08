@@ -4,25 +4,25 @@ import ContactContext from '../context/ContactContext';
 export const ContactForm = () => {
     const contactContext = useContext(ContactContext);
 
-    const [contact, setContact] = useState({
+    const [contacts, setContact] = useState({
         name: '', 
         email: '',
         phone: '',
         type: 'personel'
     });
-    const { name, email, phone, type} = contact;
+    const { name, email, phone, type} = contacts;
 
     const onChange = e =>
-    setContact({ ...contact, [e.target.name]: [e.target.value]})
+    setContact({ ...contacts, [e.target.name]: [e.target.value]})
 
     const onSubmit = e => {
         e.preventDefault();
-        contactContext.addContact(contact);
+        contactContext.addContact(contacts);
         setContact({
             name: '', 
             email: '',
             phone: '',
-            type: 'personel'
+            type: 'personel'    
         })
     }
 
@@ -69,7 +69,7 @@ export const ContactForm = () => {
                     type='submit'
                     // value={current ? 'Update Contact' : 'Add Contact'}
                     className='btn btn-primary btn-block'
-                    onSubmit={onSubmit}
+                    // onSubmit={onSubmit}
                 />
                 </div>
         </form>

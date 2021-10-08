@@ -11,7 +11,7 @@ const ContactModel = require('../models/contactModel');
 const authMiddleware = require('../middleware/authMiddleware');
 
 Router.route('/')
-    // .get(getIndex)
+    // .get(getIndex)     
     .get([ authMiddleware ], getContacts)
     .post(
             [ authMiddleware,
